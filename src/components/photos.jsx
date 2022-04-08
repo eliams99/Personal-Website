@@ -1,6 +1,6 @@
 import React from "react";
 import LazyLoad from "react-lazyload";
-import CarouselInner from "./carouselItem";
+import CarouselItem from "./carouselItem";
 
 function Photos() {
   const imagesBasePath = "./img/";
@@ -31,7 +31,7 @@ function Photos() {
   return (
     <div
       id="carouselExampleCaptions"
-      className="carousel slide my-5"
+      className="photos-section carousel slide"
       data-bs-ride="carousel"
     >
       <div className="carousel-indicators">
@@ -64,7 +64,7 @@ function Photos() {
       </div>
       <div className="carousel-inner">
         {images.map((image, index) => (
-          <CarouselInner isActive={index == 0 ? true : false} {...image} />
+          <CarouselItem isActive={index == 0 ? true : false} {...image} />
         ))}
       </div>
       <button

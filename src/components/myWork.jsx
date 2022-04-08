@@ -10,9 +10,9 @@ function MyWork() {
   });
 
   return (
-    <div className="my-5 w-100">
-      <h2 className="text-light">Work</h2>
-      <div className="cards-container">
+    <div className="work-section section w-100">
+      <h2 className="section-title text-light">Work</h2>
+      <div className="section-body cards-container">
         {myWork.map(({ title, category, year }) => (
           <WorkCard
             key={year + title}

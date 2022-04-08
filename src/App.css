@@ -18,30 +18,148 @@
   color: white;
 }
 
+/* Sidebar */
+
+.sidebar {
+  position: fixed;
+  flex-direction: column;
+  width: 200px;
+  height: 100%;
+  padding: 2em !important;
+  padding-top: 100px !important;
+  justify-content: center;
+  z-index: 1;
+  background-color: rgba(53, 53, 53, 0.426);
+  backdrop-filter: blur(14px);
+  align-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    flex-direction: row !important;
+    height: fit-content !important;
+    padding: 0.5em !important;
+    width: 100%;
+  }
+}
+
+.sidebar > .nav-link {
+  color: white;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.nav-link.active {
+  color: aqua;
+  font-weight: 700;
+}
+
+.nav-link:hover, .nav-link:focus {
+  background-color: #ffffff0e;
+  color: aqua !important;
+}
+
+/* Main container */
+
 main {
-  background-color: #282c34;
+  background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
-header.home {
+.section {
+  padding-top: 2em !important;
+  padding-bottom: 2em;
+  width: 100%;
+}
+
+.section-title {
+  text-align: start;
+  margin-left: 1rem;
+}
+
+.section-body {
+  text-align: left;
+  padding-top: 1em;
+}
+
+/* Home */
+
+header.home-section {
   color: white;
+  padding-top: 10em;
+  padding-bottom: 10em;
 }
 
-div.cards-container {
+span.my-name {
+  color: aqua;
+}
+
+/* Work */
+
+div.work-section {
+  background-color: #212121;
+}
+
+div.cards-container, div.skills-container {
   display: flex;
   width: 100%;
   overflow-x: auto;
+  margin-top: 2em;
+  padding-bottom: 26px;
 }
 
 div.card {
+  background-color: black;
   display: flex;
   min-width: 250px;
+  margin-left: 1em;
+  transition: all .4s;
 }
 
-div.card:not(:last-of-type) {
+div.card:hover {
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.734);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Skills */
+
+.skills-container > div {
+  margin-left: 1em;
   margin-right: 1em;
+  min-width: 124px;
+}
+
+/* Photos */
+
+.carousel-caption {
+  top: 0;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  text-align: left;
+  width: fit-content;
+}
+
+/* Contacts */
+.contacts-section > .section-body {
+  margin-left: 1rem;
+}
+
+/* Nav Margin/Padding */
+@media only screen and (min-width: 600px) {
+  main > *:not(.carousel) {
+    padding-left: 200px;
+  }
+
+  button.carousel-control-prev {
+    margin-left: 200px;
+  }
+  
+  .carousel-indicators {
+    padding-left: 200px !important;
+  }
 }

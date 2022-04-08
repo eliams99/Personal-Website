@@ -2,7 +2,7 @@ import React from "react";
 
 function SideNav() {
   return (
-    <nav className="nav flex-column align-items-start">
+    <aside className="sidebar nav align-items-start">
       <a className="nav-link active" aria-current="page" href="#work">
         Work
       </a>
@@ -15,7 +15,7 @@ function SideNav() {
       <a className="nav-link" href="#contacts">
         Contacts
       </a>
-    </nav>
+    </aside>
   );
 }
 

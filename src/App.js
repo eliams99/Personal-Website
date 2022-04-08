@@ -12,10 +12,10 @@ function App() {
   return (
     <div className="App d-flex">
       <SideNav />
-      <main className="tab-content container">
+      <main className="pb-5">
         <Home />
         <MyWork />
-        {/* <Skills /> */}
+        <Skills />
         <Photos />
         <Contacts />
       </main>
